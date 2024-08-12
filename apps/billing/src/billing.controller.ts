@@ -7,8 +7,8 @@ import { BillingService } from './billing.service';
 export class BillingController {
   constructor(
     private readonly billingService: BillingService,
-    private readonly rmqService: RmqService
-  ) { }
+    private readonly rmqService: RmqService,
+  ) {}
 
   @Get()
   getHello(): string {

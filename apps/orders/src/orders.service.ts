@@ -9,8 +9,8 @@ import { OrdersRepository } from './orders.repository';
 export class OrdersService {
   constructor(
     private readonly ordersRepository: OrdersRepository,
-    @Inject(BILLING_SERVICE) private billimgClient: ClientProxy
-  ) { }
+    @Inject(BILLING_SERVICE) private billimgClient: ClientProxy,
+  ) {}
 
   async createOrder(request: CreateOrderRequest) {
     const session = await this.ordersRepository.startTransaction();
